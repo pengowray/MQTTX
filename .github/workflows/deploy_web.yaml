@@ -22,9 +22,9 @@ jobs:
       - name: set env
         run: |
           cd web
-          echo "VUE_APP_PAGE_TITLE=Easy-to-Use Online MQTT Client | Try Now" > .env.local
-          echo "VUE_APP_PAGE_DESCRIPTION=Online MQTT 5.0 client on the web, using MQTT over WebSocket to connect to the MQTT Broker and test message publishing and receiving in the browser." >> .env.local
-
+          echo "BASE_URL=%%ingress_entry%%" > .env.local 
+          echo "VUE_APP_PAGE_TITLE=MQTTX Web for Home Assistant" >> .env.local
+          echo "VUE_APP_PAGE_DESCRIPTION=Local MQTT 5.0 client, using MQTT over WebSocket to connect to the MQTT Broker." >> .env.local
       - name: build
         run: |
           cd web
